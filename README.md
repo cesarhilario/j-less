@@ -1,18 +1,21 @@
 # j-less
 
 ## Como Utilizar
-* Colocar o script "j-less" antes de chamar as outras bibliotecas <br>
-~~~javascript  
-<script src="j-less"></script>
-<script src="outro-script"></script>
+* Colocar o script "j-less" no topo do head <br>
+~~~html
+<head>
+  <script src="j-less"/>
+  <script src="outro-script"/>
+</head>
 ~~~
 
 <!-- Função Seletor -->
 
 ## Função Seletor
-* Invocar a função **$()** para selecionar o elemento
+Invocar a função **$()** para selecionar o elemento
 
 ### Aplicação
+
 1) Passar **$(. + nome do elemento)** para selecionar classes
 
 *Exemplo*:
@@ -22,17 +25,17 @@
 
 2) Passar **$(# + nome do elemento)** para selecionar por id 
 
-*Exemplo*
+*Exemplo*:
 ~~~javascript
   $('#nome-do-elemento')
 ~~~
 
 <!-- Função On  -->
 ## Função .on()
-A função on é colocada diretamente no *protótipo* do **HTMLElement**, portanto todos os elementos já herdarão essa funcionalidade, basta passar o nome do evento a ser chamado.
+A função *on* é colocada diretamente no *protótipo* do **HTMLElement**, portanto todos os elementos já herdarão essa funcionalidade, basta passar o nome do evento a ser chamado.
 
 *Exemplo*
-**Chamando a função com um elemento selecionado pelo $**
+**Chamando a função com um elemento selecionado pelo $()**
 ~~~javascript
   $('#meu-elemento').on('click', callback)
 ~~~
@@ -40,7 +43,7 @@ A função on é colocada diretamente no *protótipo* do **HTMLElement**, portan
 
 <!-- Event Fire -->
 ## Event Fire
-Event fire é um disparador de eventos ou seja, passando o *elemento* e o *nome do evento* você pode acionalo a hora que desejar.
+Event fire é um disparador de eventos ou seja, passando o *elemento* e o *nome do evento* você pode aciona-lo a hora que desejar.
 
 *Exemplo* 
 ~~~javascript
