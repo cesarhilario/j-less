@@ -1,27 +1,32 @@
 /* J-LESS */
 
-//Selector
-function _$(_string){
-    var string = new String(_string);
-    var mode;
+/**
+ * Seletor de elementos 
+ * (.) para selecionar classes
+ * (#) para selecionar elementos
+ * @param {*} string Elemento HTML
+ */
+function $(string){
+    let string = new String(_string);
+    let mode;
 
     string.search(".") == 0 ? mode = "getElementsByClassName" : 0;
     string.search("#") == 0 ? mode = "getElementById" : 0;
 
     switch(mode){
         case "getElementById":
-            var element = document.querySelector(string);
+            let element = document.querySelector(string);
 
             return element;
         break;
         case "getElementsByClassName":
-            var elements = document.querySelectorAll(string);
+            let elements = document.querySelectorAll(string);
 
             return elements;
         break;
         default: 
-            var tag = string;
-            var elements = document.querySelectorAll(tag);
+            let tag = string;
+            let elements = document.querySelectorAll(tag);
 
             return elements;
     }    
@@ -33,11 +38,14 @@ HTMLElement.prototype.on = function(event, callback){
     this.addEventListener(event, callback);
 }
 
+
+// Disparador de eventos 
+// Utilizado para disparar eventos sozinhos
 function eventFire(el, etype){
     if (el.fireEvent) {
         el.fireEvent('on' + etype);
     } else {
-        var evObj = document.createEvent('Events');
+        let evObj = document.createEvent('Events');
         evObj.initEvent(etype, true, false);
         el.dispatchEvent(evObj);
     }
