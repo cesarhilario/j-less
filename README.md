@@ -17,14 +17,14 @@
 
 *Exemplo*:
 ~~~javascript
-  $('#nome-do-elemento')
+  $('.nome-do-elemento')
 ~~~
 
 2) Passar **$(# + nome do elemento)** para selecionar por id 
 
 *Exemplo*
 ~~~javascript
-  $('.nome-do-elemento')
+  $('#nome-do-elemento')
 ~~~
 
 <!-- Função On  -->
