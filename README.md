@@ -4,8 +4,8 @@
 * Colocar o script "j-less" no topo do head <br>
 ~~~html
 <head>
-  <script src="j-less"/>
-  <script src="outro-script"/>
+  <script src="j-less.js"/>
+  <script src="outro-script.js"/>
 </head>
 ~~~
 
